@@ -1,5 +1,7 @@
 package aluno.base;
 
+import cliente.IRHService.Tipo;
+
 public class Funcionario {
 
     public String getNome() {
@@ -12,5 +14,28 @@ public class Funcionario {
 
     public double getSalario() {
         return 0.0;
+    }
+
+    public double calculaSalario() {
+        return 0.0;
+    }
+
+    public Tipo getTipo() {
+        return Tipo.FUN;
+    }
+
+    public boolean addDiaria() {
+        return false;
+    }
+
+    public void setParticipacao(double valor){
+    }
+
+    public boolean getValido(){
+        return false;
+    }
+
+    public void iniciarMes() {
+
     }
 }

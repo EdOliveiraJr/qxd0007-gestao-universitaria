@@ -19,7 +19,7 @@ import aluno.base.Funcionario;
  * Professores sao classificados em classes(A, B, C, D, E). A classe
  * a qual o professor pertence influencia diretamente no seu salario.
  *
- * STAs sao classificados em niveis, que vai do 1 ate 30.O nivel influencia
+ * STAs sao classificados em niveis, que vai do 1 ate 30. O nivel influencia
  * no salario do STA.
  *
  * Terceirizados podem receber por insalubridade ou nao.
@@ -34,7 +34,7 @@ import aluno.base.Funcionario;
  */
 public interface IRHService{
 
-    public enum Tipo{PROF, STA, TERC};
+    public enum Tipo{FUN, PROF, STA, TERC}
 
     /**
      * Adiciona um funcionario na folha de pagamento
