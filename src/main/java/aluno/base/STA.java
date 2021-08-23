@@ -17,6 +17,7 @@ public class STA extends Funcionario {
             this.valido = false; 
         }
     }
+
     public STA(String cpf, String nome, int nivel) {
         this.cpf = cpf;
         this.nome = nome;
@@ -70,6 +71,7 @@ public class STA extends Funcionario {
         }
     }
 
+    @Override
     public void iniciarMes() {
         this.diaria = 0;
         this.participacao = 0;
@@ -81,7 +83,7 @@ public class STA extends Funcionario {
 
     @Override
     public void setParticipacao(double valor) {
-        this.participacao += valor;
+        this.participacao = valor;
     }
 
     @Override
@@ -92,7 +94,7 @@ public class STA extends Funcionario {
     @Override
     public double calculaSalario(){
         salario = 1000 + (100*nivel) + (diaria*100) + participacao;
-        return getSalario();
+        return salario;
     }
 
 }

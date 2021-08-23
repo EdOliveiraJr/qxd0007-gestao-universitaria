@@ -49,13 +49,14 @@ public class Terceirizado extends Funcionario{
         return false;
     }
 
+    @Override
     public void iniciarMes() {
         this.participacao = 0;
     } 
 
     @Override
     public void setParticipacao(double valor) {
-        this.participacao += valor;
+        this.participacao = valor;
     }
 
     @Override
@@ -67,9 +68,10 @@ public class Terceirizado extends Funcionario{
     public double calculaSalario(){
         if(insalubre){
             salario = 1500 + participacao;
+            return salario;
         }
         salario = 1000 + participacao;
-        return getSalario();
+        return salario;
     }
 
 }

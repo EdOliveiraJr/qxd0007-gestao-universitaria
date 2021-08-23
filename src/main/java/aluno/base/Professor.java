@@ -109,7 +109,7 @@ public class Professor extends Funcionario {
 
     @Override
     public void setParticipacao(double valor) {
-        this.participacao += valor;
+        this.participacao = valor;
     }
 
     @Override
