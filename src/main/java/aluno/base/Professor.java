@@ -9,7 +9,7 @@ public class Professor extends Funcionario {
     private String nome; 
     private char classe;
     private double salario;
-    private int diaria;
+    private int diaria = 0;
     private static int diariaMax = 3;
     private double participacao;
     private boolean valido = true;
@@ -92,12 +92,12 @@ public class Professor extends Funcionario {
     public boolean addDiaria() {
         if(diaria >= diariaMax){
             return false;
-        }else{
-            diaria++;
-            return true;
         }
+        diaria += 1;
+        return true;
     }
     
+    @Override
     public void iniciarMes() {
         this.diaria = 0;
         this.participacao = 0;
@@ -114,8 +114,9 @@ public class Professor extends Funcionario {
 
     @Override
     public double calculaSalario(){
-        salario = salario + (diaria*100) + participacao;
-        return getSalario(); 
+        double soma;
+        soma = salario + (diaria*100) + participacao;
+        return soma; 
     }
 
     @Override
